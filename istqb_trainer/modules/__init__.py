@@ -1,0 +1,1 @@
+"""ISTQB Trainer application modules."""

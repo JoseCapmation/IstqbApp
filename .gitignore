@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Local / IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Optional: keep your quiz progress only on this machine
+istqb_trainer/data/progress.json
+
+# Syllabus dump (regenerable)
+istqb_trainer/data/_syllabus_extracted.txt

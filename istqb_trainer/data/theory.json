@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "title": "Fundamentals of Testing",
+    "content_chunks": [
+      "Software is part of daily life. When it misbehaves, people lose time, money, or trust—and in critical systems, harm is possible. Testing is a structured set of activities to evaluate quality, find problems, and reduce the risk of failure in real use.\n\nThe thing you test is called a test object (code, a build, requirements, a design). Testing is not only “running the program.” It also includes planning, designing checks, reviewing documents, and reporting what you learned.",
+      "Testing answers two complementary questions. Verification asks: did we build the product right (against agreed specs)? Validation asks: did we build the right product (for users and stakeholders in a realistic context)?\n\nDynamic testing runs the software. Static testing examines work products without executing the program—reviews and static analysis are covered later in this course.",
+      "Typical reasons to test include: evaluating requirements and designs; causing failures to expose defects; reaching agreed coverage; lowering quality risk; checking contractual or legal rules; giving stakeholders information for decisions; building confidence; and checking that the product is complete enough for its purpose.\n\nObjectives change with context: what you test, test level, risk, lifecycle model, and business constraints all matter.",
+      "Testing and debugging are different. Testing can reveal failures (in dynamic testing) or defects directly (in static testing). Debugging then finds causes and fixes them, followed by confirmation testing on the fix and often regression testing to see if anything else broke—ideas you will see again when we discuss lifecycles and maintenance.",
+      "Testing is a major form of quality control (product-focused). Quality assurance is broader and process-focused: improving how work is done so good outcomes are more likely. Both use test results—testing to fix the product, QA to improve processes.\n\nPeople make errors, which can create defects in work products. A defect in code, if executed, may cause a failure (wrong behavior). Not every defect fails in every situation. Root cause analysis looks for underlying reasons so similar problems happen less often.",
+      "Seven widely used principles guide testers: testing shows presence of defects, not their absence; exhaustive testing is impossible; early testing saves cost; defects cluster; repeating the same tests loses power over time (tests “wear out”); testing is context-dependent; and “no defects found” does not guarantee success if user needs were wrong—validate as well as verify.",
+      "Common test activities include planning; monitoring and control; analysis (“what to test”); design (“how to test”); implementation (data, scripts, environment); execution; and completion with lessons learned. Outputs are testware: plans, cases, schedules, logs, reports. Two headline roles are test management (planning, monitoring, completion) and hands-on testing (analysis through execution). Whole-team quality and careful independence both have benefits and trade-offs.",
+      "This study text follows the ISTQB Certified Tester Foundation Level (CTFL) syllabus structure and is meant for exam preparation. It is not a substitute for the official syllabus, sample exams, or your provider’s materials—use those as the authoritative reference."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Testing Throughout the Software Development Lifecycle",
+    "content_chunks": [
+      "A software development lifecycle (SDLC) model describes how phases and activities relate over time (sequential, iterative, incremental, Agile methods, and more). Testing must fit the model you use.",
+      "The SDLC choice affects the scope and timing of testing, how much documentation you keep, which techniques you favor, how far automation goes, and what testers are expected to do day to day.",
+      "Good practices in any lifecycle: pair development work with test work; use different test levels with clear, non-overlapping goals; start analysis and design early for each level; involve testers in reviews as soon as drafts exist (shift left).",
+      "Test-first ideas steer development with examples. Test-driven development writes small tests before code and refactors in a tight loop. Acceptance test-driven development derives tests from acceptance criteria before implementation. Behavior-driven development expresses behavior in simple scenarios (often Given/When/Then) that can become automated checks.",
+      "DevOps brings development, testing, and operations closer, emphasizing fast feedback, automation, and pipelines (CI/CD). Benefits include quicker quality signals and regression coverage; challenges include toolchain cost and keeping automated suites maintainable. Manual, human-centered testing still matters.",
+      "Shift left means testing and quality practices move earlier—reviewing specs, static analysis, and component checks before late integration. It does not remove the need for later testing.",
+      "Retrospectives look back on what worked, what did not, and what to change. They support continuous improvement for testing and the whole team.",
+      "Five test levels: component; component integration; system; system integration; acceptance (user, operational, contractual, regulatory, alpha/beta, etc.). Test types include functional, non-functional (performance, usability, security…), black-box, and white-box; many can run at several levels. After changes, use confirmation testing on fixes and regression testing to detect side effects. Maintenance testing follows modifications, environment changes, or retirement activities."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Static Testing",
+    "content_chunks": [
+      "Static testing evaluates work products without running the software: reviews by people and checks by tools (static analysis). Goals include finding defects early, improving clarity, and assessing testability.\n\nAlmost any readable work product can be reviewed. Static analysis needs a structured artifact such as code or models. Some binaries or legally restricted third-party executables may be unsuitable.",
+      "Static testing can find issues that dynamic tests miss (for example inconsistent requirements) and often costs less than fixing the same problems late. It supports shared understanding among stakeholders. Automated static checks can run in pipelines and help with security and maintainability.",
+      "Static testing finds defects directly in documents or code. Dynamic testing often observes a failure first, then traces back to a defect. Static work applies to non-executable products; dynamic needs a runnable build. Each technique finds different defect classes; they complement each other.",
+      "Early, frequent feedback reduces mismatches between what stakeholders want and what teams build, cutting rework and risk.",
+      "A generic review process includes planning; initiation; individual review; communication and analysis (often a meeting); then fixing, follow-up, and reporting against exit criteria.",
+      "Key roles: manager (charters resources), author, moderator/facilitator, scribe, reviewers, review leader. Common review types range from informal reviews and author-led walkthroughs to technical reviews and formal inspections with metrics.",
+      "Success factors: clear objectives (not personal performance ratings), the right formality for the risk, small chunks, trained participants, management support, good facilitation, and actionable feedback."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Test Analysis and Design",
+    "content_chunks": [
+      "Test techniques help you decide what to test and how. Black-box techniques use specified behavior without looking at internals. White-box techniques use structure such as code. Experience-based techniques lean on skill and domain knowledge; they complement systematic methods.",
+      "Equivalence partitioning divides data into classes that should be treated the same. One representative test per partition is a starting point; cover valid and invalid partitions when the specification demands it. With several inputs, “each choice” coverage exercises every partition at least once but not every combination.",
+      "Boundary value analysis targets edges of ordered partitions—where developers often slip. Two-value BVA uses the boundary and one neighbor from the adjacent class; three-value BVA adds the other neighbor for stronger checks.",
+      "Decision tables list conditions and actions for business rules. Each feasible column is a rule to cover. Large rule sets explode in size, so minimization or risk focus may be needed.",
+      "State models show states, events, guards, and actions. Coverage can mean all states, all valid transitions, or all transitions including invalid attempts (stronger, important for critical systems). Tests are often event sequences.",
+      "Statement coverage counts executed statements; branch coverage counts decision outcomes. Full branch coverage implies statement coverage, not the reverse. Coverage is a guide, not a proof that logic is correct.",
+      "White-box depth helps when specifications are thin, but it may miss missing requirements entirely. Coverage metrics show gaps and guide additional tests.",
+      "Experience-based approaches include error guessing and fault attacks, exploratory testing within a time box or charter, and checklist-based testing that you refresh from real defects.",
+      "Collaborative Agile practices use concise user stories with the three Cs: card, conversation, confirmation (acceptance criteria). INVEST reminds you to keep stories independent, negotiable, valuable, estimable, small, and testable. Criteria may be scenario-style or rule-style.",
+      "In acceptance test-driven development, the team agrees on examples before coding, often starting with positive paths, then negatives and non-functional aspects. Examples may become automated acceptance tests that act as living requirements."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Managing the Test Activities",
+    "content_chunks": [
+      "Test management aligns testing with project goals. Planning chooses objectives, scope, approach, and resources; monitoring compares reality to the plan; control adjusts course. Strategy is organization-wide; plans apply to a project or release.",
+      "Estimation uses historical data, expert judgment, and scope. The test pyramid suggests many fast low-level checks, fewer broad UI tests. Testing quadrants map business-facing vs technology-facing work against support for programming versus critique of the product—handy in Agile conversations.",
+      "Risks include product risks (what could go wrong for users) and project risks (schedule, people, tools). Identify, assess likelihood and impact, then mitigate, monitor, and use risk to prioritize tests.",
+      "Planning outputs may include test plans, schedules, entry and exit criteria, and risk registers. Criteria make “ready to test” and “done testing” explicit.",
+      "During execution, track progress, defects, and residual risk. Reports should be understandable for the audience—executives need trends, teams need detail.",
+      "At completion, archive reusable testware, close environments, record unresolved issues, capture lessons learned, and communicate a completion summary.",
+      "Defect reports describe where reproduction steps, environment, evidence, and severity live in your process. Manage the defect lifecycle from discovery through resolution and retest.",
+      "Configuration management keeps versions of tests, code, and environments consistent. Traceability links requirements, tests, results, and defects so coverage and change impact stay visible."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Test Tools and Automation",
+    "content_chunks": [
+      "Tools can speed repetitive work, improve consistency, and extend observation (coverage, performance, logs). Risks include unrealistic expectations, high maintenance, and skills gaps—automation supports testers; it does not replace judgment.",
+      "Common categories include test management and tracking; static analysis; tools for design and implementation of tests; dynamic execution and logging; performance and monitoring; and specialized areas such as security or data setup.",
+      "Start automation where it pays back: stable areas, frequent runs, clear oracles. Pilot on a small scope, measure value, then scale. Keep scripts readable and under version control.",
+      "Licensing choices (open source vs commercial) affect support, compliance, and total cost. Match the tool to your stack and skills.",
+      "Some tools record actions with little scripting; others need a programming framework. Hybrid approaches are common for maintainability.",
+      "Rollout needs training, data, environments, and governance. Evaluate vendor fit, roadmap, and how the tool integrates with CI/CD and reporting."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Collated practice questions (sample papers)",
+    "content_chunks": [
+      "This chapter pairs with a large multiple-choice bank drawn from public sample papers and similar sources. Questions span the full Foundation syllabus, so they are ideal after you have touched all six technical chapters or when you want extra drills on weaker topics.",
+      "Use short sessions with review: note why the right option fits and why distractors do not. Cross-link misses back to the chapter themes (fundamentals, lifecycle, static testing, techniques, management, tools) instead of memorizing isolated phrases.",
+      "Exam items often test precise syllabus wording. Read stems carefully for absolutes (“always,” “only”) and for “best” or “most” wording that expects a prioritized answer.",
+      "Combine this bank with the official sample exam and timed attempts. Aim for consistent reasoning under time pressure, not just isolated topic recall."
+    ]
+  }
+]

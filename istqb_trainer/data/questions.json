@@ -279,7 +279,8 @@
           "D": "6"
         },
         "correct": "A",
-        "explanation": null
+        "explanation": null,
+        "image_url": "/api/diagrams/state-transition-ctfl.svg"
       },
       {
         "id": "examC_24",
@@ -291,7 +292,8 @@
           "D": "7"
         },
         "correct": "C",
-        "explanation": null
+        "explanation": null,
+        "image_url": "/api/diagrams/cfg-branch.svg"
       },
       {
         "id": "examC_25",
@@ -372,7 +374,7 @@
       },
       {
         "id": "examC_31",
-        "question": "At the beginning of each iteration, the team estimates the amount of work (in person-days) they will need to complete during the iteration. Let E(n) be the estimated amount of work for iteration n, and let A(n) be the actual amount of work done in iteration n. From the third iteration, the team uses the following estimation model based on extrapolation: E(n) = (3*A(n-1) + A(n-2)) / 4. The graph shows the estimated and actual amount of work for the first four iterations (see official Sample Exam C for the figure). What is the estimated amount of work for iteration #5?",
+        "question": "At the beginning of each iteration, the team estimates the amount of work (in person-days) they will need to complete during the iteration. Let E(n) be the estimated amount of work for iteration n, and let A(n) be the actual amount of work done in iteration n. From the third iteration, the team uses the following estimation model based on extrapolation: E(n) = (3*A(n-1) + A(n-2)) / 4. The graph shows the estimated and actual amount of work for the first four iterations. What is the estimated amount of work for iteration #5?",
         "options": {
           "A": "10.5 person-days",
           "B": "8.25 person-days",
@@ -380,7 +382,8 @@
           "D": "9.4 person-days"
         },
         "correct": "C",
-        "explanation": null
+        "explanation": null,
+        "image_url": "/api/diagrams/iteration-effort-chart.png"
       },
       {
         "id": "examC_32",
@@ -392,7 +395,8 @@
           "D": "TC 2"
         },
         "correct": "A",
-        "explanation": null
+        "explanation": null,
+        "image_url": "/api/diagrams/tc-schedule.svg"
       },
       {
         "id": "examC_33",
@@ -510,7 +514,8 @@
           "D": "A, B, C."
         },
         "correct": "A",
-        "explanation": null
+        "explanation": null,
+        "image_url": "/api/diagrams/state-table-atm.svg"
       },
       {
         "id": "guru_2",
@@ -654,7 +659,8 @@
           "D": "Login Browse Basket Browse Basket Checkout Pay Logout."
         },
         "correct": "C",
-        "explanation": null
+        "explanation": null,
+        "image_url": "/api/diagrams/state-diagram-webshop.svg"
       },
       {
         "id": "guru_14",
@@ -966,7 +972,8 @@
           "D": "ACD"
         },
         "correct": "A",
-        "explanation": null
+        "explanation": null,
+        "image_url": "/api/diagrams/code-paths.svg"
       },
       {
         "id": "guru_40",

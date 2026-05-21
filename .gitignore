@@ -19,5 +19,17 @@ venv/
 # Optional: keep your quiz progress only on this machine
 istqb_trainer/data/progress.json
 
+# Per-user progress data (private)
+istqb_trainer/data/users/
+
+# Temporary PDF image extraction artefacts
+istqb_trainer/scripts/pdf_images/
+istqb_trainer/scripts/pdf_images_png/
+istqb_trainer/scripts/guru_images/
+
+# Frontend build output and dependencies
+frontend/node_modules/
+frontend/dist/
+
 # Syllabus dump (regenerable)
 istqb_trainer/data/_syllabus_extracted.txt

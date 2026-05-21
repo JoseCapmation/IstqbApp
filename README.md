@@ -49,6 +49,53 @@ py scripts/build_data.py
 
 Study text and questions are aligned with public CTFL-style material and sample papers; the **official ISTQB syllabus and accredited materials** remain the authority for certification. This project is for **personal practice** only.
 
+## Web UI (React + FastAPI)
+
+A polished web interface is included alongside the CLI. It exposes the same data and progress, so both modes share `data/progress.json`.
+
+### Development (two terminals)
+
+**Terminal 1 — API backend** (run from `istqb_trainer/`):
+
+```bash
+cd istqb_trainer
+py -m pip install -r requirements.txt
+py -m uvicorn backend.app:app --reload --port 8000
+```
+
+**Terminal 2 — React frontend** (run from `frontend/`):
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open **http://localhost:5173** in your browser.
+
+### Production (single command)
+
+Build the frontend once, then serve everything from the FastAPI process:
+
+```bash
+cd frontend
+npm run build
+cd ../istqb_trainer
+py -m uvicorn backend.app:app --port 8000
+```
+
+Open **http://localhost:8000**.
+
+### Features
+
+- Dashboard with progress ring, chapter list, stat cards, and quick actions
+- Paged theory reader with auto-saved reading position per chapter
+- Per-chapter practice quiz (3–5 questions, 70% to pass)
+- 40-question mock exam (65% to pass, results revealed at the end)
+- Expandable per-question review with correct answer and explanation
+- Reset all progress with typed confirmation
+- Mobile-friendly sidebar layout
+
 ## Repository layout
 
 | Path | Purpose |
@@ -56,7 +103,9 @@ Study text and questions are aligned with public CTFL-style material and sample 
 | `istqb_trainer/main.py` | CLI entrypoint |
 | `istqb_trainer/data/` | Bundled theory + questions JSON; local `progress.json` |
 | `istqb_trainer/modules/` | Learning, quiz, exam, progress |
+| `istqb_trainer/backend/` | FastAPI app, routes, and pure-logic services |
 | `istqb_trainer/scripts/build_data.py` | Maintainer build from PDFs |
+| `frontend/` | Vite + React + Tailwind web UI |
 
 ## License / copyright
 

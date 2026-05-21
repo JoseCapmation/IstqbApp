@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 270" font-family="Arial, sans-serif" font-size="15">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- States -->
+  <circle cx="65"  cy="145" r="38" fill="white" stroke="#333" stroke-width="2.5"/>
+  <text x="65"  y="150" text-anchor="middle" font-weight="bold">S0</text>
+
+  <circle cx="210" cy="90"  r="38" fill="white" stroke="#333" stroke-width="2.5"/>
+  <text x="210" y="95" text-anchor="middle" font-weight="bold">S1</text>
+
+  <circle cx="355" cy="90"  r="38" fill="white" stroke="#333" stroke-width="2.5"/>
+  <text x="355" y="95" text-anchor="middle" font-weight="bold">S2</text>
+
+  <!-- Transition A: S0 -> S1 (upper arc, left to right) -->
+  <path d="M 99 128 Q 155 50 172 82" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="140" y="60" text-anchor="middle" font-size="14">A</text>
+
+  <!-- Transition D: S1 -> S0 (lower arc, right to left) -->
+  <path d="M 174 102 Q 155 175 103 158" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="130" y="165" text-anchor="middle" font-size="14">D</text>
+
+  <!-- Transition B: S1 -> S2 (upper arc) -->
+  <path d="M 248 78 Q 300 40 317 68" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="285" y="45" text-anchor="middle" font-size="14">B</text>
+
+  <!-- Transition C: S2 -> S0 (long bottom arc) -->
+  <path d="M 322 115 Q 210 250 100 162" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="215" y="250" text-anchor="middle" font-size="14">C</text>
+</svg>

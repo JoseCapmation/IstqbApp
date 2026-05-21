@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" font-family="Arial, sans-serif" font-size="12">
+
+  <!-- Title -->
+  <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="bold">Estimated and actual effort (in person-days)</text>
+
+  <!-- Chart area: left=60, top=35, right=490, bottom=265 -->
+  <!-- Y range: 013, height=230px => 1 unit = 230/13 H 17.69px -->
+
+  <!-- Y-axis gridlines and labels (0..13) -->
+  <line x1="60" y1="35" x2="60" y2="265" stroke="#555" stroke-width="1.5"/>
+  <line x1="60" y1="265" x2="490" y2="265" stroke="#555" stroke-width="1.5"/>
+
+  <!-- Horizontal grid lines -->
+  <g stroke="#ccc" stroke-width="0.8">
+    <line x1="60" y1="247.3" x2="490" y2="247.3"/><!-- 1 -->
+    <line x1="60" y1="229.6" x2="490" y2="229.6"/><!-- 2 -->
+    <line x1="60" y1="211.9" x2="490" y2="211.9"/><!-- 3 -->
+    <line x1="60" y1="194.2" x2="490" y2="194.2"/><!-- 4 -->
+    <line x1="60" y1="176.5" x2="490" y2="176.5"/><!-- 5 -->
+    <line x1="60" y1="158.8" x2="490" y2="158.8"/><!-- 6 -->
+    <line x1="60" y1="141.2" x2="490" y2="141.2"/><!-- 7 -->
+    <line x1="60" y1="123.5" x2="490" y2="123.5"/><!-- 8 -->
+    <line x1="60" y1="105.8" x2="490" y2="105.8"/><!-- 9 -->
+    <line x1="60" y1="88.1"  x2="490" y2="88.1"/> <!-- 10 -->
+    <line x1="60" y1="70.4"  x2="490" y2="70.4"/> <!-- 11 -->
+    <line x1="60" y1="52.7"  x2="490" y2="52.7"/> <!-- 12 -->
+    <line x1="60" y1="35"    x2="490" y2="35"/>   <!-- 13 -->
+  </g>
+
+  <!-- Y-axis labels -->
+  <g text-anchor="end" fill="#333">
+    <text x="55" y="269">0</text>
+    <text x="55" y="251.3">1</text>
+    <text x="55" y="233.6">2</text>
+    <text x="55" y="215.9">3</text>
+    <text x="55" y="198.2">4</text>
+    <text x="55" y="180.5">5</text>
+    <text x="55" y="162.8">6</text>
+    <text x="55" y="145.2">7</text>
+    <text x="55" y="127.5">8</text>
+    <text x="55" y="109.8">9</text>
+    <text x="55" y="92.1">10</text>
+    <text x="55" y="74.4">11</text>
+    <text x="55" y="56.7">12</text>
+    <text x="55" y="39">13</text>
+  </g>
+
+  <!-- Bar groups: 4 iterations, each group width = (490-60)/4 = 107.5px
+       bar width = 30, gap = 5, group center at 60 + 53.75, 161.25, 268.75, 376.25 -->
+  <!-- y = 265 - value * 17.69 -->
+
+  <!-- Iteration #1: Est=8 (h=141.5), Act=7 (h=123.8) -->
+  <rect x="77"  y="123.5" width="30" height="141.5" fill="#222"/>  <!-- Est 8 -->
+  <rect x="113" y="141.2" width="30" height="123.8" fill="#aaa"/>  <!-- Act 7 -->
+  <text x="113" y="284" text-anchor="middle" fill="#333">Iteration #1</text>
+
+  <!-- Iteration #2: Est=7 (h=123.8), Act=12 (h=212.5) -->
+  <rect x="184" y="141.2" width="30" height="123.8" fill="#222"/>  <!-- Est 7 -->
+  <rect x="220" y="52.7"  width="30" height="212.3" fill="#aaa"/>  <!-- Act 12 -->
+  <text x="220" y="284" text-anchor="middle" fill="#333">Iteration #2</text>
+
+  <!-- Iteration #3: Est=11 (h=194.5), Act=8 (h=141.5) -->
+  <rect x="291" y="70.4"  width="30" height="194.6" fill="#222"/>  <!-- Est 11 -->
+  <rect x="327" y="123.5" width="30" height="141.5" fill="#aaa"/>  <!-- Act 8 -->
+  <text x="327" y="284" text-anchor="middle" fill="#333">Iteration #3</text>
+
+  <!-- Iteration #4: Est=9 (h=159.2), Act=6 (h=106.2) -->
+  <rect x="398" y="105.8" width="30" height="159.2" fill="#222"/>  <!-- Est 9 -->
+  <rect x="434" y="158.8" width="30" height="106.2" fill="#aaa"/>  <!-- Act 6 -->
+  <text x="434" y="284" text-anchor="middle" fill="#333">Iteration #4</text>
+
+  <!-- Legend -->
+  <rect x="185" y="305" width="16" height="14" fill="#222"/>
+  <text x="205" y="317" fill="#333">Estimated</text>
+  <rect x="285" y="305" width="16" height="14" fill="#aaa"/>
+  <text x="305" y="317" fill="#333">Actual</text>
+</svg>

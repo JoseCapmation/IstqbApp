@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 490" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Node A – entry (top) -->
+  <circle cx="175" cy="48" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Node B – first decision (loop head) -->
+  <circle cx="175" cy="155" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Node C – left leaf (loops back to B) -->
+  <circle cx="72" cy="265" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Node D – right decision -->
+  <circle cx="265" cy="235" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Node E – lower-left -->
+  <circle cx="175" cy="370" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Node F – lower-right -->
+  <circle cx="295" cy="370" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Node G – exit (bottom) -->
+  <circle cx="225" cy="455" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
+
+  <!-- ?? Edges ?? -->
+
+  <!-- A ? B -->
+  <line x1="175" y1="76" x2="175" y2="126" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- B ? C  (left branch, diagonal) -->
+  <line x1="153" y1="177" x2="91" y2="243" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- C ? B  (back-edge, curved arc on the left) -->
+  <path d="M 50 246 C 10 200 10 140 148 142" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- B ? D  (right branch, diagonal) -->
+  <line x1="198" y1="173" x2="244" y2="211" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- D ? E  (left-down) -->
+  <line x1="246" y1="258" x2="192" y2="346" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- D ? F  (right-down) -->
+  <line x1="276" y1="260" x2="292" y2="341" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- E ? G  (right-down) -->
+  <line x1="196" y1="392" x2="210" y2="427" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- F ? G  (left-down) -->
+  <line x1="274" y1="390" x2="244" y2="430" stroke="#333" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>

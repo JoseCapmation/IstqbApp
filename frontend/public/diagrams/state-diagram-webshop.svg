@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- States (circles, evenly spaced) -->
+  <!-- Login -->
+  <circle cx="55"  cy="100" r="38" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="55"  y="105" text-anchor="middle">Login</text>
+
+  <!-- Browse -->
+  <circle cx="170" cy="100" r="38" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="170" y="105" text-anchor="middle">Browse</text>
+
+  <!-- Basket -->
+  <circle cx="290" cy="100" r="38" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="290" y="105" text-anchor="middle">Basket</text>
+
+  <!-- Check-out -->
+  <circle cx="415" cy="100" r="38" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="415" y="97" text-anchor="middle">Check-</text>
+  <text x="415" y="114" text-anchor="middle">out</text>
+
+  <!-- Pay -->
+  <circle cx="535" cy="100" r="38" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="535" y="105" text-anchor="middle">Pay</text>
+
+  <!-- Logout (double circle = final state) -->
+  <circle cx="650" cy="100" r="38" fill="white" stroke="#333" stroke-width="2"/>
+  <circle cx="650" cy="100" r="32" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="650" y="105" text-anchor="middle">Log-out</text>
+
+  <!-- Forward transitions (upper arcs) -->
+  <!-- A: Login -> Browse -->
+  <path d="M 92 88 Q 131 55 133 78" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="113" y="55" text-anchor="middle">A</text>
+
+  <!-- B: Browse -> Basket -->
+  <path d="M 207 88 Q 248 55 252 78" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="230" y="55" text-anchor="middle">B</text>
+
+  <!-- D: Basket -> Check-out -->
+  <path d="M 327 88 Q 370 55 377 78" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="354" y="55" text-anchor="middle">D</text>
+
+  <!-- F: Check-out -> Pay -->
+  <path d="M 452 88 Q 492 55 497 78" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="475" y="55" text-anchor="middle">F</text>
+
+  <!-- G: Pay -> Logout -->
+  <path d="M 572 88 Q 609 55 612 78" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="592" y="55" text-anchor="middle">G</text>
+
+  <!-- Backward transitions (lower arcs) -->
+  <!-- C: Basket -> Browse -->
+  <path d="M 253 122 Q 248 155 208 122" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="231" y="162" text-anchor="middle">C</text>
+
+  <!-- E: Check-out -> Basket -->
+  <path d="M 378 122 Q 370 155 328 122" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="354" y="162" text-anchor="middle">E</text>
+</svg>

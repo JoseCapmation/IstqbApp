@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-capmation-navy-50:  #f0f4f9;
+  --color-capmation-navy-100: #d9e2ee;
+  --color-capmation-navy-200: #b5c5dc;
+  --color-capmation-navy-600: #1e3e63;
+  --color-capmation-navy-700: #1a3554;
+  --color-capmation-navy-800: #0e2a47;
+  --color-capmation-navy-900: #08182b;
+
+  --color-capmation-lime-50:  #f7fbed;
+  --color-capmation-lime-100: #ecf4d3;
+  --color-capmation-lime-500: #9bc53d;
+  --color-capmation-lime-600: #7ea031;
+  --color-capmation-lime-700: #607a25;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 min-h-screen;
+  }
+}

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 520" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- States -->
+  <!-- START -->
+  <ellipse cx="95" cy="105" rx="72" ry="33" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="95" y="110" text-anchor="middle" font-size="15" font-weight="normal">START</text>
+
+  <!-- REQUESTING -->
+  <ellipse cx="340" cy="105" rx="92" ry="33" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="340" y="110" text-anchor="middle" font-size="15">REQUESTING</text>
+
+  <!-- WAITING LIST -->
+  <ellipse cx="640" cy="105" rx="105" ry="33" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="640" y="110" text-anchor="middle" font-size="15">WAITING LIST</text>
+
+  <!-- CONFIRMED -->
+  <ellipse cx="400" cy="295" rx="92" ry="33" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="300" text-anchor="middle" font-size="15">CONFIRMED</text>
+
+  <!-- END -->
+  <ellipse cx="400" cy="455" rx="72" ry="33" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="460" text-anchor="middle" font-size="15">END</text>
+
+  <!-- Transitions -->
+
+  <!-- START ? REQUESTING  "Room request" -->
+  <line x1="168" y1="105" x2="246" y2="105" stroke="#333" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="207" y="93" text-anchor="middle" font-size="13">Room request</text>
+
+  <!-- REQUESTING ? WAITING LIST  "Not available" -->
+  <line x1="433" y1="105" x2="533" y2="105" stroke="#333" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="483" y="93" text-anchor="middle" font-size="13">Not available</text>
+
+  <!-- REQUESTING ? CONFIRMED  "Available" -->
+  <line x1="355" y1="138" x2="383" y2="261" stroke="#333" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="340" y="205" text-anchor="end" font-size="13">Available</text>
+
+  <!-- WAITING LIST ? CONFIRMED  "Available" -->
+  <line x1="557" y1="134" x2="480" y2="265" stroke="#333" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="540" y="215" text-anchor="start" font-size="13">Available</text>
+
+  <!-- WAITING LIST ? END  "Cancel"  (right-side vertical drop) -->
+  <polyline points="745,105 780,105 780,455 474,455" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="795" y="285" text-anchor="start" font-size="13">Cancel</text>
+
+  <!-- CONFIRMED ? END  "Pay" -->
+  <line x1="400" y1="328" x2="400" y2="421" stroke="#333" stroke-width="1.8" marker-end="url(#arrowhead)"/>
+  <text x="416" y="382" text-anchor="start" font-size="13">Pay</text>
+</svg>

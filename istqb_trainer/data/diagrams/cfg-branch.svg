@@ -5,25 +5,25 @@
     </marker>
   </defs>
 
-  <!-- Node A – entry (top) -->
+  <!-- Node A - entry (top) -->
   <circle cx="175" cy="48" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
 
-  <!-- Node B – first decision (loop head) -->
+  <!-- Node B - first decision (loop head) -->
   <circle cx="175" cy="155" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
 
-  <!-- Node C – left leaf (loops back to B) -->
+  <!-- Node C - left leaf (loops back to B) -->
   <circle cx="72" cy="265" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
 
-  <!-- Node D – right decision -->
+  <!-- Node D - right decision -->
   <circle cx="265" cy="235" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
 
-  <!-- Node E – lower-left -->
+  <!-- Node E - lower-left -->
   <circle cx="175" cy="370" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
 
-  <!-- Node F – lower-right -->
+  <!-- Node F - lower-right -->
   <circle cx="295" cy="370" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
 
-  <!-- Node G – exit (bottom) -->
+  <!-- Node G - exit (bottom) -->
   <circle cx="225" cy="455" r="28" fill="white" stroke="#333" stroke-width="2.5"/>
 
   <!-- ?? Edges ?? -->

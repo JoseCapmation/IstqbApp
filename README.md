@@ -60,7 +60,7 @@ A polished web interface is included alongside the CLI. It exposes the same data
 ```bash
 cd istqb_trainer
 py -m pip install -r requirements.txt
-py -m uvicorn backend.app:app --reload --port 8000
+py -m uvicorn backend.app:app --reload --port 8001
 ```
 
 **Terminal 2 — React frontend** (run from `frontend/`):
